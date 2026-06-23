@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edgaroo.dev | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page" id="home">
+      <nav class="nav">
+        <a class="brand" href="index.html">🎸 edgaroo<span>.dev</span></a>
+        <div class="links" aria-label="Primary navigation">
+          <a class="active" href="index.html">home</a>
+          <a href="">about</a>
+          <a href="">projects</a>
+          <a href="">contact me</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="noise" aria-hidden="true"></div>
+        <div class="fx" aria-hidden="true">
+          <div class="guitar">🎸</div>
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+        </div>
+
+        <div class="hero-text">
+          <p class="kicker">Cal Poly SLO · B.S. Computer Science</p>
+          <h1>Hi, I'm <em>Edgar O.</em></h1>
+          <p class="lead">
+            3rd-year CS student @ Cal Poly SLO building full-stack products.
+            Also I like to play guitar.
+          </p>
+          <div class="tags">
+            <span>Full Stack Dev &lt;/></span>
+            <span>ITS Student Lead 🫡</span>
+            <span>B.S. Computer Science 👨🏽‍💻</span>
+            <span>Music Minor 🎵</span>
+          </div>
+          <div class="actions">
+            <button class="btn primary">View my work</button>
+            <button class="btn ghost">Get in touch</button>
+          </div>
+        </div>
+
+        <figure class="photo" aria-label="Photo of Edgar O.">
+          <img src="me.JPG" alt="Photo of Edgar O." />
+        </figure>
+      </section>
+
+      <section class="about">
+        <div>
+          <p class="label">About me</p>
+          <h2 class="title">
+            CS Student.<br /><span>Developer.</span> Guitarist.
+          </h2>
+          <p class="copy">
+            <!--Better name for this class as well as other simlar ones like "sub" etc.-->
+            I'm a first-generation 3rd-year Computer Science student at Cal Poly
+            SLO with a passion for building things on the web. Outside of code,
+            I'm also pursuing a music minor and exploring different generes of
+            guitar playing as well as music production.
+          </p>
+          <div class="card job">
+            <div class="icon">
+              <!-- What is ti , why is there so much ti classes everywhere-->
+              <i class="ti ti-headset" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="name">Student Lead — ITS Service Desk</p>
+              <p class="meta">Cal Poly SLO · Current role</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Spotify API -->
+          <p class="label">now playing on Spotify</p>
+          <div class="card song">
+            <div class="art">
+              <i class="ti ti-music" aria-hidden="true"></i>
+            </div>
+            <div class="song-info">
+              <p class="name">El Toro Relajo</p>
+              <p class="meta">Banda MS</p>
+            </div>
+            <div class="live">
+              <span class="dot"></span>
+              <span>live</span>
+            </div>
+          </div>
+
+          <!--Make more simple-->
+          <p class="label mt">my playing — clips</p>
+          <div class="clips">
+            <div class="card clip">
+              <button class="play">
+                <i class="ti ti-player-play" aria-hidden="true"></i>
+              </button>
+              <div class="bar">
+                <span class="w35"></span>
+              </div>
+              <span class="time">0:42</span>
+            </div>
+            <div class="card clip">
+              <button class="play">
+                <i class="ti ti-player-play" aria-hidden="true"></i>
+              </button>
+              <div class="bar">
+                <span class="w0"></span>
+              </div>
+              <span class="time">1:10</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <p class="label">Work</p>
+        <h2 class="title">Projects</h2>
+        <p class="sub">Things I've built. More coming soon.</p>
+
+        <div class="grid">
+          <article class="card project">
+            <div class="card-head">
+              <div class="icon">
+                <i class="ti ti-code" aria-hidden="true"></i>
+              </div>
+              <div class="arrow">
+                <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3>Project Title Here</h3>
+            <p class="desc">
+              One or two sentences describing what it does and why you built it.
+            </p>
+            <div class="chips">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="card-head">
+              <div class="icon">
+                <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+              </div>
+              <div class="arrow">
+                <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3>Another Project</h3>
+            <p class="desc">
+              Short description of what problem this solved or what you learned.
+            </p>
+            <div class="chips">
+              <span>Next.js</span>
+              <span>Tailwind</span>
+            </div>
+          </article>
+
+          <article class="card project muted">
+            <div class="card-head">
+              <div class="icon">
+                <i class="ti ti-clock" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3>Coming soon</h3>
+            <p class="desc">Working on something new — check back soon.</p>
+          </article>
+
+          <article class="card project muted">
+            <div class="card-head">
+              <div class="icon">
+                <i class="ti ti-clock" aria-hidden="true"></i>
+              </div>
+            </div>
+            <h3>Coming soon</h3>
+            <p class="desc">Another project in progress.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2 class="title">Let's connect:</h2>
+        <p class="sub">
+          I'm readily open to collaborations, internships, or just a good
+          conversation about tech, music, or Cal Poly life.
+        </p>
+        <div class="socials">
+          <div class="social">
+            <i class="ti ti-mail" aria-hidden="true"></i> Email me
+          </div>
+          <div class="social">
+            <i class="ti ti-brand-github" aria-hidden="true"></i> GitHub
+          </div>
+          <div class="social">
+            <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
+          </div>
+        </div>
+        <hr />
+        <p class="foot">Built with Next.js · Deployed on Vercel · © 2025</p>
+      </section>
+    </main>
+  </body>
+</html>
