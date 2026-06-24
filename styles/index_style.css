@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
 :root {
+  --font-sans: "Roboto Slab", Georgia, serif;
   --ink: #3a000d;
   --wine: #5c0a1e;
   --wine-2: #7b1c2e;
-  --muted: #7b3045;
+  --muted: #884457;
   --pink: #ef4371;
   --line: #c94060;
   --light: #fdeef2;
@@ -61,8 +64,8 @@ button {
 }
 
 .label {
-  color: var(--wine-2);
-  font-size: 11px;
+  color: var(--wine);
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.08em;
   margin-bottom: 6px;
@@ -71,7 +74,7 @@ button {
 
 .title {
   color: var(--ink);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.25;
   margin-bottom: 12px;
@@ -85,7 +88,7 @@ button {
 .sub,
 .desc {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -108,38 +111,35 @@ button {
 
 .icon i {
   color: var(--pink);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .name {
   color: var(--ink);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .meta {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 2px;
-}
-
-.mt {
-  margin-top: 14px;
 }
 
 /* Nav */
 .nav {
   align-items: center;
   background: var(--wine);
-  border-bottom: 0.5px solid var(--line);
+  border-bottom: 2px solid var(--line);
   display: flex;
   justify-content: space-between;
   padding: 14px 20px;
+  position: relative;
 }
 
 .brand {
   color: var(--light);
-  font-size: 15px;
+  font-size: 27px;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -157,7 +157,7 @@ button {
   border-bottom: 1.5px solid transparent;
   color: #d4a0ae;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 22px;
   padding: 4px 0;
   transition: color 0.15s;
 }
@@ -166,6 +166,34 @@ button {
 .links .active {
   border-bottom-color: var(--pink);
   color: var(--light);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    padding: 14px 16px 13px;
+  }
+
+  .brand {
+    text-align: center;
+    width: 100%;
+  }
+
+  .links {
+    border-top: 2px solid var(--line);
+    box-shadow: inset 0 3px 0 #e870902e;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    justify-content: center;
+    padding-top: 12px;
+    width: 100%;
+  }
+
+  .links a {
+    font-size: 18px;
+  }
 }
 
 /* Hero */
@@ -199,7 +227,7 @@ button {
 
 .guitar {
   animation: guitarFloat 4s ease-in-out infinite;
-  font-size: 240px;
+  font-size: 16em;
   line-height: 1;
   opacity: 0.07;
   user-select: none;
@@ -252,7 +280,7 @@ button {
 
 .photo::before {
   color: #e8709066;
-  font-size: 34px;
+  font-size: 37px;
   font-weight: 500;
   left: 50%;
   letter-spacing: 0.04em;
@@ -272,7 +300,7 @@ button {
 
 .kicker {
   color: var(--pink);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.06em;
   margin-bottom: 10px;
@@ -280,7 +308,7 @@ button {
 
 .hero h1 {
   color: var(--light);
-  font-size: 38px;
+  font-size: 41px;
   font-weight: 500;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -293,7 +321,7 @@ button {
 
 .lead {
   color: var(--rose);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 28px;
   max-width: 420px;
@@ -311,7 +339,7 @@ button {
   border: 0.5px solid var(--line);
   border-radius: 999px;
   color: var(--pink);
-  font-size: 12px;
+  font-size: 13px;
   padding: 5px 12px;
 }
 
@@ -323,7 +351,7 @@ button {
 .btn {
   border-radius: var(--radius);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
   padding: 9px 20px;
 }
 
@@ -340,9 +368,125 @@ button {
   color: var(--light);
 }
 
+@media (min-width: 2000px) {
+  .hero {
+    gap: clamp(48px, 4vw, 96px);
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+    min-height: 520px;
+    padding: 72px clamp(80px, 7vw, 150px);
+  }
+
+  .hero-text {
+    max-width: 780px;
+  }
+
+  .kicker {
+    font-size: clamp(16px, 0vw, 19px);
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(59px, 3vw, 79px);
+    margin-bottom: 18px;
+  }
+
+  .lead {
+    font-size: clamp(20px, 1vw, 26px);
+    max-width: 680px;
+  }
+
+  .tags {
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .tags span {
+    font-size: clamp(15px, 0vw, 18px);
+    padding: 8px 16px;
+  }
+
+  .btn {
+    font-size: clamp(16px, 0vw, 19px);
+    padding: 12px 28px;
+  }
+
+  .guitar {
+    font-size: clamp(19em, 19vw, 28em);
+  }
+
+  .ring {
+    height: clamp(340px, 18vw, 460px);
+    width: clamp(340px, 18vw, 460px);
+  }
+}
+
+@media (max-width: 1250px) {
+  .hero {
+    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(160px, 200px);
+    min-height: 300px;
+    padding: 44px 30px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .lead {
+    font-size: 15px;
+    max-width: 380px;
+  }
+
+  .guitar {
+    font-size: 14em;
+  }
+
+  .ring {
+    height: 230px;
+    width: 230px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    gap: 20px;
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 180px);
+    min-height: 280px;
+    padding: 38px 26px;
+  }
+
+  .hero h1 {
+    font-size: 33px;
+  }
+
+  .lead {
+    margin-bottom: 22px;
+  }
+
+  .tags {
+    margin-bottom: 24px;
+  }
+
+  .tags span {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .guitar {
+    font-size: 12em;
+  }
+
+  .ring {
+    height: 200px;
+    width: 200px;
+  }
+}
+
 @media (max-width: 700px) {
   .hero {
     grid-template-columns: 1fr;
+    min-height: 300px;
+    padding: 42px 24px;
   }
 
   .hero-text {
@@ -354,12 +498,12 @@ button {
   }
 
   .guitar {
-    font-size: 210px;
+    font-size: 9em;
   }
 
   .ring {
-    height: 230px;
-    width: 230px;
+    height: 190px;
+    width: 190px;
   }
 }
 
@@ -404,7 +548,7 @@ button {
 
 .art i {
   color: var(--light);
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .song-info {
@@ -422,7 +566,7 @@ button {
   align-items: center;
   color: var(--green);
   display: flex;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   gap: 4px;
 }
@@ -462,7 +606,7 @@ button {
 
 .play i {
   color: var(--pink);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .bar {
@@ -493,7 +637,7 @@ button {
 .time {
   color: var(--muted);
   flex-shrink: 0;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* Projects */
@@ -532,18 +676,18 @@ button {
 
 .arrow i {
   color: var(--line);
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .project h3 {
   color: var(--ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .desc {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
@@ -559,7 +703,7 @@ button {
   border: 0.5px solid var(--soft);
   border-radius: 999px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 11px;
   padding: 3px 8px;
 }
 
@@ -604,14 +748,13 @@ button {
   color: var(--light);
   cursor: pointer;
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
   gap: 6px;
   padding: 8px 16px;
 }
 
-.social i {
-  color: var(--pink);
-  font-size: 14px;
+.social img {
+  width: 20px;
 }
 
 .social:hover {
@@ -620,11 +763,201 @@ button {
 
 .contact hr {
   border: none;
-  border-top: 0.5px solid var(--wine-2);
+  border-top: 0.5px solid var(--muted);
   margin: 24px 0 16px;
 }
 
 .foot {
   color: var(--muted);
+  font-size: 16px;
+}
+
+.page-header {
+  background: var(--wine);
+  padding: 48px 35px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  color: var(--light);
+  font-size: 39px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.page-title span {
+  color: var(--pink);
+}
+
+.page-lead {
+  color: var(--rose);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+
+/* ══════════════════════════════
+   ABOUT PAGE
+══════════════════════════════ */
+.about-full {
+  background: var(--light);
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 35px;
+}
+
+.about-music {
+  margin-top: 28px;
+}
+
+/* ── Timeline ── */
+.timeline {
+  list-style: none;
+  margin-top: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* vertical rule */
+.timeline::before {
+  background: var(--soft);
+  bottom: 6px;
+  content: "";
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 1px;
+}
+
+.tl-item {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-dot {
+  background: var(--light);
+  border: 2px solid var(--soft);
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 13px;
+  left: -17px;
+  margin-top: 3px;
+  position: absolute;
+  transition: transform 0.2s;
+  width: 13px;
+}
+
+.tl-item:hover .tl-dot {
+  transform: scale(1.3);
+}
+
+/* dot accent colors by category */
+.tl-school .tl-dot {
+  background: var(--wine);
+  border-color: var(--pink);
+}
+.tl-job .tl-dot {
+  background: #1e3a5f;
+  border-color: #60a5fa;
+}
+.tl-music .tl-dot {
+  background: #0d2b1a;
+  border-color: var(--green);
+}
+.tl-code .tl-dot {
+  background: #1e1040;
+  border-color: #a78bfa;
+}
+.tl-now .tl-dot {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.tl-body {
+  padding-left: 4px;
+}
+
+.tl-date {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.tl-title {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.tl-sub {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* timeline dot legend */
+.tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tl-legend-item {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
   font-size: 11px;
+  gap: 5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tl-legend-dot {
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+}
+
+.tl-legend-dot.school {
+  background: var(--pink);
+}
+.tl-legend-dot.job {
+  background: #60a5fa;
+}
+.tl-legend-dot.music {
+  background: var(--green);
+}
+.tl-legend-dot.code {
+  background: #a78bfa;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE — inner pages
+══════════════════════════════ */
+@media (max-width: 700px) {
+  .about-full,
+  .project-featured,
+  .contact-body,
+  .skill-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
 }
