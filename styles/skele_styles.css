@@ -1,0 +1,224 @@
+/* ══════════════════════════════
+   PROJECTS PAGE
+══════════════════════════════ */
+
+/* featured slot */
+.featured-project {
+  background: var(--light);
+  padding: 36px 35px;
+}
+
+.project-featured {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+
+.project-featured-img {
+  align-items: center;
+  background: var(--wine);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.img-placeholder {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  gap: 8px;
+}
+
+.img-placeholder i {
+  color: var(--wine-2);
+  font-size: 30px;
+}
+
+.project-featured-img img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.project-featured-body h2 {
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* small button variant */
+.btn.sm {
+  align-items: center;
+  display: inline-flex;
+  font-size: 13px;
+  gap: 5px;
+  padding: 7px 14px;
+}
+
+/* inline live/github links inside project cards */
+.project-card-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.project-card-links a {
+  border-bottom: 0.5px solid var(--line);
+  color: var(--line);
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.project-card-links a:hover {
+  border-bottom-color: var(--pink);
+  color: var(--pink);
+}
+
+/* skills strip at bottom of projects page */
+.skills-strip {
+  background: var(--light);
+  border-top: 0.5px solid var(--soft);
+  padding: 36px 35px;
+}
+
+.skill-groups {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 16px;
+}
+
+.skill-group-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════
+   CONTACT PAGE
+══════════════════════════════ */
+.contact-body {
+  background: var(--light);
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  padding: 40px 35px;
+}
+
+/* form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-field label {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  background: #fff;
+  border: 0.5px solid var(--soft);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  padding: 10px 12px;
+  resize: vertical;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--line);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--rose);
+}
+
+.contact-form .btn {
+  align-items: center;
+  align-self: flex-start;
+  display: inline-flex;
+  gap: 6px;
+}
+
+/* direct contact cards */
+.contact-direct {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.contact-card {
+  align-items: center;
+  background: #fff;
+  border: 0.5px solid var(--soft);
+  border-radius: var(--radius);
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  transition: border-color 0.15s;
+}
+
+.contact-card:hover {
+  border-color: var(--line);
+}
+
+/* resume block */
+.resume-block {
+  background: var(--wine);
+  border-radius: var(--radius-lg);
+  margin-top: 24px;
+  padding: 20px;
+}
+
+.resume-block .label {
+  color: var(--rose);
+}
+
+.resume-block .copy {
+  color: var(--rose);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.resume-block .btn {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 12px;
+}

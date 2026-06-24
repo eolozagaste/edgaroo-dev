@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edgaroo.dev | Contact</title>
+    <link rel="stylesheet" href="styles/index_style.css" />
+    <link rel="stylesheet" href="styles/skele_styles.css" />
+  </head>
+  <body>
+    <main class="page" id="contact-page">
+      <nav class="nav">
+        <a class="brand" href="index.html">🎸 edgaroo<span>.dev</span></a>
+        <div class="links" aria-label="Primary navigation">
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a href="projects.html">projects</a>
+          <a class="active" href="contact.html">contact me</a>
+        </div>
+      </nav>
+
+      <!-- PAGE HEADER -->
+      <section class="page-header">
+        <p class="label">Get in touch</p>
+        <h1 class="page-title">Let's talk.</h1>
+        <p class="page-lead">
+          Open to internships, collaborations, or just a good conversation about
+          tech, music, or Cal Poly life. Best way to reach me is email.
+        </p>
+      </section>
+
+      <!-- CONTACT BODY -->
+      <section class="contact-body">
+        <!-- LEFT: form -->
+        <div class="contact-form-col">
+          <p class="label">Send a message</p>
+
+          <!--
+            HOW TO WIRE THIS UP (5 min):
+            1. Go to formspree.io and create a free account
+            2. Create a new form — you'll get a unique endpoint URL
+            3. Replace action="#" below with your Formspree URL
+               e.g. action="https://formspree.io/f/xyzabcde"
+            4. That's it — submissions arrive in your email, no backend needed
+          -->
+          <form class="contact-form" action="#" method="POST" novalidate>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="What's on your mind?"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">
+              <i class="ti ti-send" aria-hidden="true"></i> Send message
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT: direct links + resume -->
+        <div class="contact-links-col">
+          <p class="label">Or find me here</p>
+
+          <div class="contact-direct">
+            <a class="contact-card" href="mailto:YOUR_EMAIL@email.com">
+              <!-- TODO: replace with your real email -->
+              <div class="icon">
+                <i class="ti ti-mail" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="name">Email</p>
+                <p class="meta">YOUR_EMAIL@email.com</p>
+                <!-- TODO: replace -->
+              </div>
+            </a>
+
+            <a
+              class="contact-card"
+              href="https://github.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener"
+            >
+              <!-- TODO: replace with your GitHub URL -->
+              <div class="icon">
+                <i class="ti ti-brand-github" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="name">GitHub</p>
+                <p class="meta">github.com/YOUR_USERNAME</p>
+              </div>
+            </a>
+
+            <a
+              class="contact-card"
+              href="https://linkedin.com/in/YOUR_HANDLE"
+              target="_blank"
+              rel="noopener"
+            >
+              <!-- TODO: replace with your LinkedIn URL -->
+              <div class="icon">
+                <i class="ti ti-brand-linkedin" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="name">LinkedIn</p>
+                <p class="meta">linkedin.com/in/YOUR_HANDLE</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Resume download -->
+          <div class="resume-block">
+            <p class="label mt">Résumé</p>
+            <p class="copy">
+              <!-- FILL IN: one line about what's on your resume or what you're looking for -->
+              Currently looking for summer 2026 internships in software
+              engineering or full-stack development.
+            </p>
+            <a
+              class="btn primary mt-sm"
+              href="assets/edgar-resume.pdf"
+              download
+              aria-label="Download Edgar's résumé as PDF"
+            >
+              <!-- TODO: add your resume PDF to assets/ folder and update href above -->
+              <i class="ti ti-download" aria-hidden="true"></i> Download résumé
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="contact">
+        <h2 class="title">Let's connect:</h2>
+        <p class="sub">
+          I'm readily open to collaborations, internships, or just a good
+          conversation about tech, music, or Cal Poly life.
+        </p>
+        <div class="socials">
+          <div class="social">
+            <img
+              class="social-icon"
+              src="https://api.iconify.design/lucide/mail.svg?color=%23ef4371"
+              alt=""
+              aria-hidden="true"
+            />
+            Email me
+          </div>
+          <div class="social">
+            <img
+              class="social-icon"
+              src="https://cdn.simpleicons.org/github/ef4371"
+              alt=""
+              aria-hidden="true"
+            />
+            GitHub
+          </div>
+          <div class="social">
+            <img
+              class="social-icon"
+              src="https://cdn.simpleicons.org/linkedin/ef4371"
+              alt=""
+              aria-hidden="true"
+            />
+            LinkedIn
+          </div>
+        </div>
+        <hr />
+        <p class="foot">Built with HTML/CSS · Deployed on Vercel · © 2025</p>
+      </footer>
+    </main>
+  </body>
+</html>
