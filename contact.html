@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edgaroo.dev | Contact</title>
+    <link rel="stylesheet" href="styles/index_style.css" />
+    <link rel="stylesheet" href="styles/skele_styles.css" />
+    <link rel="icon" type="image/png" href="logos/guitar_logo.png" />
+    <script src="portfolio-config.js" defer></script>
+    <script src="scripts/portfolio.js" defer></script>
+  </head>
+  <body>
+    <main class="page" id="contact-page">
+      <nav class="nav">
+        <a class="brand" href="index.html">🎸 edgaroo<span>.dev</span></a>
+        <div class="links" aria-label="Primary navigation">
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a href="projects.html">projects</a>
+          <a class="active" href="contact.html">contact me</a>
+        </div>
+      </nav>
+
+      <section class="page-header">
+        <p class="label">Get in touch</p>
+        <h1 class="page-title">Let's talk.</h1>
+        <p class="page-lead">
+          Open to software engineering internships, collaborations, and useful
+          conversations about web development, tech support, music, or Cal Poly
+          life. Email is the best place to start.
+        </p>
+      </section>
+
+      <section class="contact-body">
+        <div class="contact-form-col">
+          <p class="label">Send a message</p>
+          <form class="contact-form" data-contact-form action="#" method="POST">
+            <div class="form-field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required /></div>
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required /></div>
+            <div class="form-field"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea></div>
+            <button class="btn primary" type="submit">Send message</button>
+            <p class="form-message" data-form-message></p>
+          </form>
+        </div>
+
+        <div class="contact-links-col">
+          <p class="label">Or find me here</p>
+          <div class="contact-direct">
+            <a class="contact-card" data-config-href="email" href="#">
+              <div class="icon">
+                <img src="logos/email-1-svgrepo-com.svg" alt="" />
+              </div>
+              <div>
+                <p class="name">Email</p>
+                <p class="meta" data-config-text="email">
+                  eolozaga@calpoly.edu
+                </p>
+              </div>
+            </a>
+            <a
+              class="contact-card"
+              data-config-href="github"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="icon">
+                <img src="logos/github-142-svgrepo-com.svg" alt="" />
+              </div>
+              <div>
+                <p class="name">GitHub</p>
+                <p class="meta" data-config-text="github">
+                  github.com/eolozagaste
+                </p>
+              </div>
+            </a>
+            <a
+              class="contact-card"
+              data-config-href="linkedin"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="icon">
+                <img src="logos/linkedin-svgrepo-com.svg" alt="" />
+              </div>
+              <div>
+                <p class="name">LinkedIn</p>
+                <p class="meta" data-config-text="linkedin">
+                  linkedin.com/in/eolozagaste
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="resume-block">
+            <p class="label mt">Résumé</p>
+            <p class="copy">
+              Download my current resume for a quick overview of my coursework,
+              experience, projects, and technical background.
+            </p>
+            <div class="actions wrap">
+              <a
+                class="btn primary mt-sm"
+                data-config-href="resume"
+                href="#"
+                download
+                >Download résumé</a
+              ><button class="copy-button" type="button" data-copy-email>
+                Copy email
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-step">
+        <p class="label">Before you go</p>
+        <h2 class="title">Want to see the work first?</h2>
+        <p class="sub">
+          Projects give more context for what I am learning and building.
+        </p>
+        <a class="btn primary" href="projects.html">View projects</a>
+      </section>
+
+      <footer class="contact">
+        <h2 class="title">Let's connect:</h2>
+        <p class="sub">
+          I'm open to collaborations, internships, or just a good conversation
+          about tech, music, or Cal Poly life.
+        </p>
+        <div class="socials">
+          <a class="social" data-config-href="email" href="#">
+            <img
+              class="social-icon"
+              src="logos/email-1-svgrepo-com.svg"
+              alt=""
+            />Email me</a
+          >
+          <a
+            class="social"
+            data-config-href="github"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="social-icon"
+              src="logos/github-142-svgrepo-com.svg"
+              alt=""
+            />GitHub</a
+          >
+          <a
+            class="social"
+            data-config-href="linkedin"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="social-icon"
+              src="logos/linkedin-svgrepo-com.svg"
+              alt=""
+            />LinkedIn</a
+          >
+        </div>
+        <hr />
+        <p class="foot">
+          Built with HTML, CSS, and JavaScript · Deployed on Vercel · © 2026
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

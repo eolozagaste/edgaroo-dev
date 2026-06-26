@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ESN | Help</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="helpStyle.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="site.js"></script>
+</head>
+<body onload="javascript:textStartUp();">
+  <nav class="nav-bar">
+    <div id="nav-sec">
+      <div id="nav-buttons">
+        <a href="index.html" class="shop-links">
+          <button class="nbutton">HOME</button>
+        </a>
+        <a href="shop.html" class="shop-links">
+          <button class="nbutton">SHOP</button>
+        </a>
+        <a href="help.html"class="shop-links">
+          <button class="nbutton" id="active-tab">HELP</button>
+        </a>
+        <a href="about.html" class="shop-links">
+          <button class="nbutton">ABOUT</button>
+        </a>
+      </div>
+      <div id="logo-div">
+        <a href="index.html"><img src="icons/logo.png" id="logo"></a>
+      </div>
+      <div id="icons-div">
+        <input type="search" id="search-bar" placeholder="Search for products...">
+        <div id="img-div">
+          <a href="cart.html" id="shop-links">
+            <img src="icons/shopping-cart.png" id="cart-icon">
+            <span id="cart-quantity">21</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="array-sec">
+      <div id="text-array-div">
+        <span id="text-array">This is tester text</span>
+      </div>
+    </div>
+  </nav>
+  <script>
+    function debounce(func, wait = 10, immediate = true) {
+      let timeout;
+      return function() {
+        let context = this, args = arguments;
+        let later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    let scrollPos = 0;
+    const nav = document.querySelector('.nav-bar');
+
+    function checkPosition() {
+      let windowY = window.scrollY;
+      if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
+      } else {
+        // Scrolling DOWN
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
+      }
+      scrollPos = windowY;
+    }
+
+    // window.addEventListener('scroll', checkPosition);
+    window.addEventListener('scroll', debounce(checkPosition));
+
+    let textArray = new Array();
+    let textIndex = 0;
+
+    function textCycle() {
+      document.getElementById('text-array').innerText = textArray[textIndex].Text;
+      textIndex++;
+      if (textIndex > 5)
+      {
+        textIndex = 0;
+      }
+      setTimeout("textCycle()", 4000);
+      return;
+    }
+
+    function textStartUp() {
+      textArray[0] = new Text;
+      textArray[0].Text = "Buy one, get one (BOGO) SALE now LIVE on select products!";
+      textArray[1] = new Text;
+      textArray[1].Text = "Use Code: ESN2023 at checkout for 5% off ALL products!";
+      textArray[2] = new Text;
+      textArray[2].Text = "New Location now OPEN in Santa Maria, CA";
+      textArray[3] = new Text;
+      textArray[3].Text = "All ingredients FDA Approved!";
+      textArray[4] = new Text;
+      textArray[4].Text = "Paypal, Klarna, Visa, Cashapp, Zelle, & Body Parts are all accepted as payment!";
+      textArray[5] = new Text;
+      textArray[5].Text = "Didn't like a product? Too bad NO returns!";
+      textCycle();
+      return;
+    }
+  </script>
+</body>
+</html>

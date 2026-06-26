@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edgaroo.dev | Projects</title>
+    <link rel="stylesheet" href="styles/index_style.css" />
+    <link rel="stylesheet" href="styles/skele_styles.css" />
+    <link rel="icon" type="image/png" href="logos/guitar_logo.png" />
+    <script src="portfolio-config.js" defer></script>
+    <script src="scripts/portfolio.js" defer></script>
+  </head>
+  <body>
+    <main class="page" id="projects-page">
+      <nav class="nav">
+        <a class="brand" href="index.html">🎸 edgaroo<span>.dev</span></a>
+        <div class="links" aria-label="Primary navigation">
+          <a href="index.html">home</a>
+          <a href="about.html">about</a>
+          <a class="active" href="projects.html">projects</a>
+          <a href="contact.html">contact me</a>
+        </div>
+      </nav>
+
+      <section class="page-header">
+        <p class="label">What I've built</p>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-lead">
+          A mix of class work, personal projects, and portfolio pieces. Each
+          card connects a screenshot to what I built, what changed, and what
+          tools I used.
+        </p>
+        <div class="actions">
+          <a class="btn primary" data-config-href="resume" href="#" download
+            >Download résumé</a
+          ><a class="btn ghost" href="contact.html">Contact me</a>
+        </div>
+      </section>
+
+      <section class="featured-project">
+        <p class="label">Featured</p>
+        <article class="card project-featured">
+          <div class="project-featured-img">
+            <img src="images/portfolio_screenie.png" alt="Screenshot of edgaroo.dev" />
+          </div>
+          <div class="project-featured-body">
+            <h2>edgaroo.dev</h2>
+            <p class="copy">
+              My personal portfolio, built first with plain HTML, CSS, and
+              JavaScript so I can ship quickly, keep the structure readable, and
+              later migrate it with a clear component map.
+            </p>
+            <div class="chips mt-sm"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></div>
+            <div class="project-links mt-sm">
+              <a class="btn primary sm" href="index.html">Live site</a>
+              <a
+                class="btn ghost sm"
+                data-config-href="github"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="projects">
+        <div class="section-head">
+          <div><p class="label">All projects</p><h2 class="title">More work</h2></div>
+          <div class="filter-row" aria-label="Project filters">
+            <button class="filter-button active" type="button" data-project-filter="all">All</button>
+            <button class="filter-button" type="button" data-project-filter="web">Web</button>
+            <button class="filter-button" type="button" data-project-filter="school">School</button>
+            <button class="filter-button" type="button" data-project-filter="personal">Personal</button>
+          </div>
+        </div>
+        <p class="sub">Each project taught me something different.</p>
+
+        <div class="project-showcase">
+          <article class="card project-card" data-project-type="web personal">
+            <img src="images/portfolio_screenie.png" alt="Screenshot of edgaroo.dev" />
+            <div class="project-body">
+              <h3>Personal Portfolio</h3>
+              <p class="desc">
+                Multi-page portfolio with a home hub, longer about story,
+                project filters, contact links, and music details.
+              </p>
+              <div class="chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-card-links">
+                <a href="index.html">Live</a>
+                <a data-config-href="github" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card project-card" data-project-type="web school">
+            <img
+              src="images/chinov_screenie.png"
+              alt="Screenshot of the Chino Valley Chamber of Commerce project"
+            />
+            <div class="project-body">
+              <h3>Chino Valley Chamber of Commerce</h3>
+              <p class="desc">
+                SkillsUSA web design project for a local nonprofit, focused on
+                responsive pages, clear navigation, and community-first content.
+              </p>
+              <div class="chips">
+                <span>Responsive UI</span><span>Team Project</span><span>Forms</span>
+              </div>
+              <div class="project-card-links">
+                <a href="portfolio%20sites/chino_valley/index.html">Live</a>
+                <a data-config-href="github" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card project-card" data-project-type="web personal">
+            <img src="images/mcedgars_screenie.png" alt="Screenshot of McEdgar's" />
+            <div class="project-body">
+              <h3>McEdgar's</h3>
+              <p class="desc">
+                Restaurant concept site with a menu-heavy layout, product
+                imagery, category pages, and a playful brand direction.
+              </p>
+              <div class="chips">
+                <span>JavaScript</span><span>Menu UI</span><span>Responsive</span>
+              </div>
+              <div class="project-card-links">
+                <a href="portfolio%20sites/mc-edgars/index.html">Live</a>
+                <a data-config-href="github" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card project-card" data-project-type="web school">
+            <img src="images/esn_screenie.png" alt="Screenshot of ESN Supplements" />
+            <div class="project-body">
+              <h3>ESN Supplements</h3>
+              <p class="desc">
+                Ecommerce-style supplement storefront with product grids,
+                shopping pages, cart flow, and promotional sections.
+              </p>
+              <div class="chips">
+                <span>Storefront</span><span>Product Grid</span><span>Cart UI</span>
+              </div>
+              <div class="project-card-links">
+                <a href="portfolio%20sites/esn_supps/index.html">Live</a>
+                <a data-config-href="github" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card project-card" data-project-type="web school">
+            <img src="images/zoo_screenie.png" alt="Screenshot of the virtual zoo project" />
+            <div class="project-body">
+              <h3>Virtual Zoo</h3>
+              <p class="desc">
+                Interactive school project with animal pages, location maps,
+                audio clips, and a simple walkthrough-style experience.
+              </p>
+              <div class="chips">
+                <span>HTML</span><span>Audio</span><span>Interactive</span>
+              </div>
+              <div class="project-card-links">
+                <a href="portfolio%20sites/virtual-zoo/index.html">Live</a>
+                <a data-config-href="github" href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills-strip">
+        <p class="label">Stack I work with</p>
+        <p class="copy mt-sm">Skills mean more in context, so I connect them to projects above. Here's the quick list:</p>
+        <div class="skill-groups">
+          <div class="skill-group"><p class="skill-group-label">Languages</p><div class="chips"><span>JavaScript</span><span>Python</span><span>C / C++</span><span>HTML / CSS</span></div></div>
+          <div class="skill-group"><p class="skill-group-label">Frameworks</p><div class="chips"><span>React</span><span>Node.js</span><span>Next.js later</span></div></div>
+          <div class="skill-group"><p class="skill-group-label">Tools</p><div class="chips"><span>Git / GitHub</span><span>VS Code</span><span>Vercel</span><span>Linux</span></div></div>
+        </div>
+      </section>
+
+      <section class="next-step"><p class="label">Interested?</p><h2 class="title">Let's connect.</h2><p class="sub">The contact page has direct links, resume, and a simple message form.</p><a class="btn primary" href="contact.html">Get in touch</a></section>
+
+      <footer class="contact">
+        <h2 class="title">Let's connect:</h2>
+        <p class="sub">
+          Open to internships, collaborations, or a good conversation about
+          tech, music, or Cal Poly life.
+        </p>
+        <div class="socials">
+          <a class="social" data-config-href="email" href="#">
+            <img
+              class="social-icon"
+              src="logos/email-1-svgrepo-com.svg"
+              alt=""
+            />Email me</a
+          >
+          <a
+            class="social"
+            data-config-href="github"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="social-icon"
+              src="logos/github-142-svgrepo-com.svg"
+              alt=""
+            />GitHub</a
+          >
+          <a
+            class="social"
+            data-config-href="linkedin"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="social-icon"
+              src="logos/linkedin-svgrepo-com.svg"
+              alt=""
+            />LinkedIn</a
+          >
+        </div>
+        <hr />
+        <p class="foot">
+          Built with HTML, CSS, and JavaScript · Deployed on Vercel · © 2026
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

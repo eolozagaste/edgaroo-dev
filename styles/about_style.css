@@ -280,19 +280,15 @@
   top: -34px;
   transform: translate(-50%, 6px) scale(0.96);
   transition: opacity 0.22s ease, transform 0.22s ease;
-  transition-delay: 1s;
+  transition-delay: 0s;
   white-space: nowrap;
 }
 
-.tl-tooltip:not(.is-visible) {
-  transition-delay: 0s;
-}
-
 .tl-dot:hover .tl-tooltip,
-.tl-dot:focus-visible .tl-tooltip,
-.tl-tooltip.is-visible {
+.tl-dot:focus-visible .tl-tooltip {
   opacity: 1;
   transform: translate(-50%, 0) scale(1);
+  transition-delay: 1s;
 }
 
 .timeline-photo {
@@ -323,16 +319,29 @@
   display: flex;
   justify-content: center;
   min-height: 180px;
+  overflow: hidden;
   transition: background 0.28s ease;
 }
 
 .timeline-photo-placeholder::after {
   color: #fdeef2cc;
-  content: "placeholder pic";
+  content: "timeline pic";
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.timeline-photo-placeholder.has-image::after {
+  display: none;
+}
+
+.timeline-photo-img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .timeline-photo-copy {

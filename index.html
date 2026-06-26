@@ -6,6 +6,8 @@
     <title>edgaroo.dev | Home</title>
     <link rel="stylesheet" href="styles/index_style.css" />
     <link rel="icon" type="image/png" href="logos/guitar_logo.png" />
+    <script src="portfolio-config.js" defer></script>
+    <script src="scripts/portfolio.js" defer></script>
   </head>
   <body>
     <main class="page" id="home">
@@ -32,18 +34,19 @@
           <p class="kicker">Cal Poly SLO · B.S. Computer Science</p>
           <h1>Hi, I'm <em>Edgar O.</em></h1>
           <p class="lead">
-            3rd-year CS student @ Cal Poly SLO building full-stack products.
-            Also I like to play guitar.
+            First-generation CS student building web experiences that feel
+            useful, personal, and polished. Also: I play guitar.
           </p>
           <div class="tags">
-            <span>Full Stack Dev &lt;/></span>
+            <span>Full Stack Dev &lt;/&gt;</span>
             <span>ITS Student Lead 🫡</span>
             <span>B.S. Computer Science 👨🏽‍💻</span>
             <span>Music Minor 🎵</span>
           </div>
           <div class="actions">
-            <button class="btn primary">View my work</button>
-            <button class="btn ghost">Get in touch</button>
+            <a class="btn primary" href="projects.html">View my work</a>
+            <a class="btn ghost" href="contact.html">Get in touch</a>
+            <a class="btn ghost" href="about.html">Read my story</a>
           </div>
         </div>
 
@@ -52,7 +55,7 @@
         </figure>
       </section>
 
-      <section class="about">
+      <section class="about section-split">
         <div>
           <p class="label">About me</p>
           <h2 class="title">
@@ -66,161 +69,141 @@
             production.
           </p>
           <div class="card job">
-            <div class="icon">
-              <i class="ti ti-headset" aria-hidden="true"></i>
-            </div>
+            <div class="icon">💻</div>
             <div>
               <p class="name">Student Lead — ITS Service Desk</p>
               <p class="meta">Cal Poly SLO · Current role</p>
             </div>
           </div>
+          <a class="inline-link" href="about.html">Read more about me →</a>
         </div>
 
         <div>
           <p class="label">now playing on Spotify</p>
           <div class="card song">
-            <div class="art">
-              <i class="ti ti-music" aria-hidden="true"></i>
-            </div>
+            <div class="art">♪</div>
             <div class="song-info">
-              <p class="name">El Toro Relajo</p>
-              <p class="meta">Banda MS</p>
+              <p class="name" data-spotify-track>El Toro Relajo</p>
+              <p class="meta" data-spotify-artist>Banda MS</p>
             </div>
             <div class="live">
-              <span class="dot"></span>
-              <span>live</span>
+              <span class="dot"></span><span data-spotify-status>Live</span>
             </div>
           </div>
 
           <p class="label mt">my playing — clips</p>
-          <div class="clips">
-            <div class="card clip">
-              <button class="play">
-                <i class="ti ti-player-play" aria-hidden="true"></i>
-              </button>
-              <div class="bar">
-                <span class="w35"></span>
-              </div>
-              <span class="time">0:42</span>
-            </div>
-            <div class="card clip">
-              <button class="play">
-                <i class="ti ti-player-play" aria-hidden="true"></i>
-              </button>
-              <div class="bar">
-                <span class="w0"></span>
-              </div>
-              <span class="time">1:10</span>
-            </div>
-          </div>
+          <div class="clips" data-clip-list></div>
         </div>
       </section>
 
       <section class="projects">
-        <p class="label">Work</p>
-        <h2 class="title">Projects</h2>
-        <p class="sub">Things I've built. More coming soon.</p>
+        <div class="section-head">
+          <div>
+            <p class="label">Featured work</p>
+            <h2 class="title">Projects</h2>
+          </div>
+          <a class="inline-link" href="projects.html">View all projects →</a>
+        </div>
+        <p class="sub">
+          A few things I've built or am actively shaping into portfolio pieces.
+        </p>
 
-        <div class="grid">
-          <article class="card project">
-            <div class="card-head">
-              <div class="icon">
-                <i class="ti ti-code" aria-hidden="true"></i>
+        <div class="project-showcase">
+          <article class="card project-card">
+            <img
+              src="images/portfolio_screenie.png"
+              alt="Screenshot of edgaroo.dev"
+            />
+            <div class="project-body">
+              <h3>edgaroo.dev</h3>
+              <p class="desc">
+                Personal portfolio built with HTML, CSS, and small JavaScript
+                improvements. Designed to scale later into React or Next.js.
+              </p>
+              <div class="chips">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
               </div>
-              <div class="arrow">
-                <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+              <div class="project-actions">
+                <a class="btn primary sm" href="projects.html">View details</a>
               </div>
-            </div>
-            <h3>Project Title Here</h3>
-            <p class="desc">
-              One or two sentences describing what it does and why you built it.
-            </p>
-            <div class="chips">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>PostgreSQL</span>
             </div>
           </article>
 
-          <article class="card project">
-            <div class="card-head">
-              <div class="icon">
-                <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+          <article class="card project-card">
+            <img
+              src="images/chinov_screenie.png"
+              alt="Screenshot placeholder for web project"
+            />
+            <div class="project-body">
+              <h3>Chino Valley Chamber of Commerce</h3>
+              <p class="desc">
+                A website me and a partner built for a local non-profit
+                competeting at the CA SkillsUSA Web Design Competetion.
+              </p>
+              <div class="chips">
+                <span>Responsive UI</span><span>Forms</span><span>Filters</span>
               </div>
-              <div class="arrow">
-                <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-              </div>
-            </div>
-            <h3>Another Project</h3>
-            <p class="desc">
-              Short description of what problem this solved or what you learned.
-            </p>
-            <div class="chips">
-              <span>Next.js</span>
-              <span>Tailwind</span>
-            </div>
-          </article>
-
-          <article class="card project muted">
-            <div class="card-head">
-              <div class="icon">
-                <i class="ti ti-clock" aria-hidden="true"></i>
+              <div class="project-actions">
+                <a class="btn primary sm" href="projects.html">View details</a>
               </div>
             </div>
-            <h3>Coming soon</h3>
-            <p class="desc">Working on something new — check back soon.</p>
-          </article>
-
-          <article class="card project muted">
-            <div class="card-head">
-              <div class="icon">
-                <i class="ti ti-clock" aria-hidden="true"></i>
-              </div>
-            </div>
-            <h3>Coming soon</h3>
-            <p class="desc">Another project in progress.</p>
           </article>
         </div>
       </section>
 
-      <section class="contact">
+      <section class="next-step">
+        <p class="label">Next up</p>
+        <h2 class="title">Want the full story?</h2>
+        <p class="sub">
+          Learn how computers, Cal Poly, ITS, and guitar all connect in my path.
+        </p>
+        <a class="btn primary" href="about.html">Read my story</a>
+      </section>
+
+      <footer class="contact">
         <h2 class="title">Let's get connected:</h2>
         <p class="sub">
-          I'm readily open to collaborations, internships, or just a good
-          conversation about tech, music, or Cal Poly life.
+          I'm open to internships, collaborations, or a good conversation about
+          tech, music, or Cal Poly life.
         </p>
         <div class="socials">
-          <div class="social">
-            <img
+          <a class="social" data-config-href="email" href="#"
+            ><img
               class="social-icon"
               src="logos/email-1-svgrepo-com.svg"
               alt=""
-              aria-hidden="true"
-            />
-            Email me
-          </div>
-          <div class="social">
-            <img
+            />Email me</a
+          >
+          <a
+            class="social"
+            data-config-href="github"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            ><img
               class="social-icon"
               src="logos/github-142-svgrepo-com.svg"
               alt=""
-              aria-hidden="true"
-            />
-            GitHub
-          </div>
-          <div class="social">
-            <img
+            />GitHub</a
+          >
+          <a
+            class="social"
+            data-config-href="linkedin"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            ><img
               class="social-icon"
               src="logos/linkedin-svgrepo-com.svg"
               alt=""
-              aria-hidden="true"
-            />
-            LinkedIn
-          </div>
+            />LinkedIn</a
+          >
         </div>
         <hr />
-        <p class="foot">Built with Next.js · Deployed on Vercel · © 2025</p>
-      </section>
+        <p class="foot">
+          Built with HTML, CSS, and JavaScript · Deployed on Vercel · © 2026
+        </p>
+      </footer>
     </main>
   </body>
 </html>

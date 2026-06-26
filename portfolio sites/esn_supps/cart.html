@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ESN | Shopping Cart</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="cartStyle.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="site.js"></script>
+</head>
+<body onload="javascript:textStartUp();">
+  <nav class="nav-bar">
+    <div id="nav-sec">
+      <div id="nav-buttons">
+        <a href="index.html" class="shop-links">
+          <button class="nbutton">HOME</button>
+        </a>
+        <a href="shop.html" class="shop-links">
+          <button class="nbutton" id="active-tab">SHOP</button>
+        </a>
+        <a href="help.html"class="shop-links">
+          <button class="nbutton">HELP</button>
+        </a>
+        <a href="about.html" class="shop-links">
+          <button class="nbutton">ABOUT</button>
+        </a>
+      </div>
+      <div id="logo-div">
+        <a href="index.html"><img src="icons/logo.png" id="logo"></a>
+      </div>
+      <div id="icons-div">
+        <input type="search" id="search-bar" placeholder="Search for products...">
+        <div id="img-div">
+          <a href="cart.html" id="shop-links">
+            <img src="icons/shopping-cart.png" id="cart-icon">
+            <span id="cart-quantity"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="array-sec">
+      <div id="text-array-div">
+        <span id="text-array">This is tester text</span>
+      </div>
+    </div>
+  </nav>
+  <div class="sep-bar">
+  </div>
+  <div id="main-content">
+    <div id="left-side">
+      <div class="order-info">
+        <div class="review-head-sec">
+          <span id="review-header">Review your order</span>
+        </div>
+        <div class="orders">
+          <div class="order-1">
+            <div class="delivery-date">
+              <span class="delivery-span">Delivery Date: Tuesday, June 13</span>
+            </div>
+            <div class="product-info-sec">
+              <img src="images/tester-product.jpg" class="product-pic">
+              <div class="product-info">
+                <span class="product-name">This is product name - amount</span>
+                <span class="product-price">$69.25</span>
+                <span class="product-quantity">Quantity: 2</span>
+              </div>
+              <div class="delivery-sec">
+                <div class="delivery-head-sec"> 
+                  <span class="deliver-header">Choose a delivery option:</span>
+                </div>
+                <div class="delivery-options">
+                  <div class="input-sec">
+                    <input type="radio" class="radio-button" name="shipping-option">
+                    <div class="radio-info">  
+                      <span class="radio-span1" class="radio-button">Tuesday, June 13</span><span class="radio-span2">FREE Shipping</span>
+                    </div>
+                  </div>
+                  <div class="input-sec">
+                    <input type="radio" class="radio-button" name="shipping-option">
+                    <div class="radio-info">  
+                      <span class="radio-span1" class="radio-button">Sunday, June 11</span><span class="radio-span2">$5.99 - Express Shipping</span>
+                    </div>
+                  </div>
+                  <div class="input-sec">
+                    <input type="radio" class="radio-button" name="shipping-option">
+                    <div class="radio-info">  
+                      <span class="radio-span1" class="radio-button">Thursday, June 8</span><span class="radio-span2">$10.99 - 1Day Shipping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-2"></div>
+        </div>
+      </div>
+    </div>
+      
+    <div id="right-side">
+      <div class="order-summary-sec">
+        <div class="summary-head-sec">
+          <span class="summary-header">Order Summary</span>
+        </div>
+        <div class="subtotal-sec">
+          <div class="sec1">
+            <span class="subtotal-names">
+              Items (11):
+            </span>
+            <span class="subtotal-names">
+              $176.67
+            </span>
+          </div>
+          <div class="sec2">
+            <span class="subtotal-names">
+              Shipping & handling:
+            </span>
+            <span class="subtotal-names">
+              $0.00
+            </span>
+          </div>
+          <div class="sec3">
+            <div class="left-underborder"></div>
+          </div>
+          <div class="sec4">
+            <span class="subtotal-names">
+              Total before tax:
+            </span>
+            <span class="subtotal-names">
+              $176.67
+            </span>
+          </div>
+          <div class="sec5">
+            <span class="subtotal-names">
+              Estimated tax (10%):
+            </span>
+            <span class="subtotal-names">
+              $17.67
+            </span>
+          </div>
+          <div class="sec6">
+            <span class="subtotal-names" id="order-total">
+              Order total:
+            </span>
+            <span class="subtotal-names" id="order-total">
+              $194.34
+            </span>
+          </div>
+          <div class="button-sec">
+            <button class="order-button" onclick="orderPlaced()">
+              Place your order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="return-sec">
+    <a href="shop.html">
+      <button class="return-button" style="
+      background-color: #e70404;
+      color: white;
+    ">View All Products</button>
+    </a>
+  </div>
+  <script>
+    function debounce(func, wait = 10, immediate = true) {
+      let timeout;
+      return function() {
+        let context = this, args = arguments;
+        let later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+
+    let scrollPos = 0;
+    const nav = document.querySelector('.nav-bar');
+
+    function checkPosition() {
+      let windowY = window.scrollY;
+      if (windowY < scrollPos) {
+        // Scrolling UP
+        nav.classList.add('is-visible');
+        nav.classList.remove('is-hidden');
+      } else {
+        // Scrolling DOWN
+        nav.classList.add('is-hidden');
+        nav.classList.remove('is-visible');
+      }
+      scrollPos = windowY;
+    }
+
+    // window.addEventListener('scroll', checkPosition);
+    window.addEventListener('scroll', debounce(checkPosition));
+
+    let textArray = new Array();
+    let textIndex = 0;
+
+    function textCycle() {
+      document.getElementById('text-array').innerText = textArray[textIndex].Text;
+      textIndex++;
+      if (textIndex > 5)
+      {
+        textIndex = 0;
+      }
+      setTimeout("textCycle()", 4000);
+      return;
+    }
+
+    function textStartUp() {
+      textArray[0] = new Text;
+      textArray[0].Text = "Buy one, get one (BOGO) SALE now LIVE on select products!";
+      textArray[1] = new Text;
+      textArray[1].Text = "Use Code: ESN2023 at checkout for 5% off ALL products!";
+      textArray[2] = new Text;
+      textArray[2].Text = "New Location now OPEN in Santa Maria, CA";
+      textArray[3] = new Text;
+      textArray[3].Text = "All ingredients FDA Approved!";
+      textArray[4] = new Text;
+      textArray[4].Text = "Paypal, Klarna, Visa, Cashapp, Zelle, & Body Parts are all accepted as payment!";
+      textArray[5] = new Text;
+      textArray[5].Text = "Didn't like a product? Too bad NO returns!";
+      textCycle();
+      return;
+    }
+
+    $('input[type="checkbox"]').on('change', function() {
+      $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+    });
+
+    function orderPlaced () {
+      alert('Order Placed!')
+    }
+  </script>
+</body>
+</html>

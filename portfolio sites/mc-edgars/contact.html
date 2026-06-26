@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logos/mc_logo_clear.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>Contact | McEdgar's Burgers</title>
+  </head>
+  <body data-page="contact">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a href="index.html" class="brand-link" aria-label="McEdgar's home">
+          <img src="logos/mc_logo.png" alt="McEdgar's Burgers logo" class="brand-logo">
+        </a>
+        <nav class="side-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link active">Contact Us</a>
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-label">Office hours</span>
+          <span class="note-copy">1:00 PM to 1:30 PM, weekdays.</span>
+        </div>
+      </aside>
+
+      <main class="page">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h1>Questions, pickup plans, and tray emergencies.</h1>
+          </div>
+          <a href="index.html#menu" class="secondary-button">Back to menu</a>
+        </header>
+
+        <section class="contact-grid">
+          <div class="contact-card">
+            <span class="card-kicker">Call</span>
+            <h2>805-555-7021</h2>
+            <p>Best chance of reaching us is during the extremely generous office window.</p>
+          </div>
+          <div class="contact-card">
+            <span class="card-kicker">Email</span>
+            <h2>mcedgarsburgers@gmail.com</h2>
+            <p>We aim to respond in under 63 business days, assuming the fryer is calm.</p>
+          </div>
+          <div class="contact-card">
+            <span class="card-kicker">Visit</span>
+            <h2>123 Burger Lane</h2>
+            <p>Santa Maria, CA. Open daily from 10:30 AM to 11:00 PM.</p>
+          </div>
+        </section>
+
+        <section class="contact-panel">
+          <form class="contact-form" data-feedback-form>
+            <p class="eyebrow">Send a note</p>
+            <h2>We will pretend the inbox is organized.</h2>
+            <div class="form-row">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com">
+              </label>
+            </div>
+            <label>
+              Topic
+              <select name="topic">
+                <option>Pickup order</option>
+                <option>Catering</option>
+                <option>Menu question</option>
+                <option>General feedback</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="What can we help with?"></textarea>
+            </label>
+            <button type="submit" class="primary-button">Send message</button>
+            <p class="form-message" data-form-message></p>
+          </form>
+
+          <div class="location-card">
+            <img src="images/drinks/lemonades.jpg" alt="McEdgar's lemonades">
+            <div>
+              <p class="eyebrow">Quick details</p>
+              <ul class="detail-list">
+                <li>Dine-in, takeout, and pickup available.</li>
+                <li>Large party trays need 24 hours notice.</li>
+                <li>Parking is behind the red awning.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

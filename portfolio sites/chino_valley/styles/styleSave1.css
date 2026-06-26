@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+  .seperator {
+    height: 2vh;
+    width: 100%;
+    background-color: #a0cf5f;
+  }
+
+  nav {
+    grid-area: nav;
+    width: 100%;
+    height: 15vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+  }
+
+    .logo-container {
+      grid-area: logo;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 20%;
+      height: 100%;
+      justify-content: center;
+      margin-left: 0.8em;
+      margin-right: 0.8em;
+    }
+
+    .logo {
+      width: 100%;
+    }
+
+    .pb-sec {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: space-between;
+      margin-left: 0.8em;
+      margin-right: 0.8em;
+    }
+
+    #active-but {
+      background-color: #a0cf5f;
+      opacity: 0.8;
+    }
+
+    #active-but:hover {
+      cursor: not-allowed;
+    }
+
+    .page-button {
+      height: 2.2em; 
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: #007482;
+      color: white;
+      font-family: 'Nunito';
+      font-size: 1.1em;
+      font-weight: 600;
+      border: none;
+      border-radius: 20px; 
+      letter-spacing: 3px;
+    }
+
+    .page-button:hover {
+      cursor: pointer;
+      opacity: 90%;
+      background-color: #098f9e;
+    }
+
+    @media screen and (max-width: 1300px) {
+      .page-button {
+        font-size: 0.9em;
+      }
+    }
+
+    /*Between 1300-1750 Default Styles apply*/
+
+    @media screen and (min-width: 1750px) {
+      .page-button {
+        font-size: 1.3em;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      .page-button {
+        height: 2.2em;
+        font-size: 1.5em;
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+      }
+    }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden; 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+  }
+
+    .mission-sec {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin-left: 0.8em;
+      margin-right: 0.8em;
+    }
+
+    .mission-header {
+      letter-spacing: 10px;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .mission-statement {
+      line-height: 25px;
+      margin-right: 0.8em;
+      margin-bottom: 0.8em;
+    }
+
+    .donate-but {
+      background-color: #a0cf5f;
+      border: none;
+      padding: 20px;
+      color: white;
+      border-radius: 25%;
+      font-weight: bold;
+    }
+
+    .quote-sec {
+      width: 50%;
+      height: 100%;
+    }
+
+  footer {
+    background-color: rgb(212, 212, 212);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .links-contain {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .links-sec1, .links-sec2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-logos-sec {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+
+    .social-logo {
+      height: 50px;
+    }
+
+
+

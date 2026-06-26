@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chino Valley Chamber of Commerce
+    Foundation | Home Page</title>
+  <link rel="stylesheet" href="styles/style.css">  
+  <link rel="icon" href="images/logo.png">
+</head>
+<body onload="typer();">
+  <div class="container">
+    <div class="seperator"></div>
+    <nav>
+      <div class="logo-container">
+        <img src="images/Chino-Valley-Chamber-Green-logo-1.png" alt="Chino Valley Chamber of Commerece Logo" class="logo">
+      </div>
+      <div class="pb-sec">
+        <a href="index.html">
+          <button class="page-button" id="active-but">
+            Home
+          </button>
+        </a>
+        <a href="about.html">
+          <button class="page-button">
+            About Us
+          </button>
+        </a>
+        <a href="projects.html">
+          <button class="page-button">
+            What's New
+          </button>
+        </a>
+        <a href="contact.html">
+          <button class="page-button">
+            Contact Us
+          </button>
+        </a>
+      </div>
+    </nav>
+    <div class="seperator"></div>
+    <main id="mainBackground"> 
+      <div class="mission-sec">
+        <span class="mission-header">
+          Our Mission: 
+        </span>
+        <span class="mission-statement">
+          Welcome to the Chino Valley Chamber of Commerce Foundation, a beacon of support and
+          development in the heart of our vibrant community. As a cornerstone for progress and economic
+          vitality, our Foundation is dedicated to nurturing the economic interests and welfare of the Chino
+          Valley region. Through our unwavering commitment to community good projects, we aim to
+          create a flourishing environment where businesses and community life can thrive.
+        </span>
+        <div class="donate-sec">
+          <button class="donate-but">
+            Donate Now
+          </button>
+        </div>
+      </div>  
+      <div class="quote-sec">
+        <span id="quote-span"></span>
+      </div>
+    </main>
+    <footer>
+      <div class="foot-head">Chino Valley Chamber of Commerce Foundation</div>
+      <div class="links-contain">
+        <div class="links-sec1">
+          <a href="#">Important Link 1</a>
+          <a href="#">Important Link 2</a>
+          <a href="#">Important Link 3</a>
+        </div>
+        <div class="links-sec2">
+          <a href="#">Important Link 4</a>
+          <a href="#">Important Link 5</a>
+          <a href="#">Important Link 6</a>
+        </div>
+      </div>
+      <div class="social-logos-sec">
+        <img src="images/facebook.png" alt="facebook" class="social-logo">
+        <img src="images/twitter.png" alt="twitter" class="social-logo">
+        <img src="images/tiktok.png" alt="tiktok" class="social-logo">
+        <img src="images/instagram.png" alt="instagram" class="social-logo">
+      </div>
+    </footer>
+  </div>
+</body>
+<script>
+  var i = 0;
+  var typedQuote = `"To empower and elevate the Chino Valley by supporting projects that enrich the community and drive economic growth."`;
+  var speedOfText = 40;
+
+  function typer() {
+    if (i < typedQuote.length) {
+      document.getElementById("quote-span").innerHTML += typedQuote.charAt(i);
+      i++;
+      setTimeout(typer, speedOfText);
+    }
+  }
+
+  var bannerImgs = [
+    "images/given/banner (1).png",
+    "images/given/banner (2).png",
+    "images/given/banner (3).png",
+    "images/given/banner (4).png",
+    "images/given/banner (5).png",
+    "images/given/banner (6).png",
+  ];
+
+  var currentIndex = 0;
+  var mainBackground = document.getElementById('mainBackground');
+
+  function changeBackgroundImage() {
+      mainBackground.style.backgroundImage = "url('" + bannerImgs[currentIndex] + "')";
+      currentIndex = (currentIndex + 1) % bannerImgs.length;
+  }
+
+  changeBackgroundImage();
+  setInterval(changeBackgroundImage, 2000);
+
+
+
+
+</script>
+</html>

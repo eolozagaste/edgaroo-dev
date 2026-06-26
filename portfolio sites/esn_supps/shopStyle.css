@@ -1,0 +1,369 @@
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main-content {
+  width: 100%;
+  display: flex;
+  padding-left: 160px;
+  padding-right: 160px;
+  flex-direction: row;
+  justify-content: start;
+  height: 100%;
+  box-sizing: border-box;
+  margin-top: 135px;
+  font-family: 'proxima-nova', sans-serif;
+}
+
+#left-side {
+  width: 25%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#production-info {
+  margin-top: 80px;
+  font-family: 'proxima-nova', sans-serif;
+}
+
+#htg-sec {
+  display: flex;
+  align-items: center;
+}
+
+#delivery-van-icon {
+  width: 50px;
+  margin-right: 10px;
+}
+
+#htg-header {
+  font-weight: bold;
+}
+
+#checkboxes-sec {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eee {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.htg-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+  cursor: pointer;
+}
+
+.htg-checkbox:active, 
+.htg-checkbox:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.htg-checkbox:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.htg-checkbox:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+
+.checkbox-name {
+  margin-top: 5px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.departments-sec {
+  height: 100%;
+  border-top: 1px solid #adb8c0;
+  border-bottom: 1px solid #adb8c0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.choose-header {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.department-selection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  height: 200px;
+}
+
+.department-choice {
+  padding: 10px;
+  font-family: 'oxygen', sans-serif;
+  font-size: 15px;
+  border: none;
+  background-color: #e70404;
+  color: white;
+  font-weight: 600;
+  width: 200px;
+  cursor: pointer;
+}
+
+.department-choice:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.801);
+}
+
+#right-side {
+  width: 75%;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.department-header-sec {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+#lazy2 {
+  margin: 0px;
+}
+
+.department-header {
+  font-weight: 700;
+  font-size: 30px;
+  height: 50px;
+}
+
+.department-header2 {
+  font-weight: 700;
+  font-size: 30px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#lazy {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#department-desc {
+  line-height: 20px;
+  font-size: 17px;
+}
+
+.products-grid-sec {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  box-sizing: border-box;
+  font-family: 'proxima-nova-extra-condensed', sans-serif;
+  padding-bottom: 40px;
+}
+
+.product-div {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  border-bottom: 1px solid rgb(231, 230, 230);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'proxima-nova-extra-condensed', sans-serif;
+  padding-bottom: 25px;
+}
+
+#mid-pro-div {
+  border-left: 1px solid rgb(231, 230, 230);
+  border-right: 1px solid rgb(231, 230, 230);
+}
+
+.image-sec {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.test-img {
+  width: 80%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flavors-sizes-sec {
+  width: 100%;
+  height: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.fs-span {
+  font-size: 12px;
+  font-family: 'proxima-nova', sans-serif;
+  color: #1a1a1a;
+}
+
+.company-promo-sec {
+  width: 100%;
+}
+
+.cp-span {
+  font-size: 12px;
+  font-family: 'proxima-nova', sans-serif;
+  color: #1a1a1a;
+}
+
+.product-name-sec {
+  margin-top: 5px;
+  margin-bottom: 5px;;
+}
+
+.pn-span {
+  font-family: 'oxygen', sans-serif;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.rating-sec {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.rating-img {
+  width: 85px;
+}
+
+.price-sec {
+  width: 100%;
+}
+
+.price-span {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.sale-sec {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  color: #1a1a1a;
+}
+
+.sale-span {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #e70404;
+}
+
+.type-sale-span {
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 12px;
+  color: #1a1a1a;
+}
+
+.addto-sec {
+  width: 100%;
+  display: flex;
+  justify-content: star;
+}
+
+.addto-button {
+  border: 2px solid #1a1a1a;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.addto-button:hover {
+  background-color: #1a1a1a;
+  color: white !important;
+  cursor: pointer;
+}
+
+.addto-button:active {
+  background-color: #1a1a1ae3;
+  border: 2px solid #1a1a1a0a;
+}
+
+.return-sec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 45px;
+}
+
+.return-button {
+  border-radius: 40px;
+  border: none; 
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'oxygen',sans-serif;
+  height: 55px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.return-button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.801);
+}

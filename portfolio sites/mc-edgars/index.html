@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logos/mc_logo_clear.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>McEdgar's Burgers</title>
+  </head>
+  <body data-page="home">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a href="index.html" class="brand-link" aria-label="McEdgar's home">
+          <img src="logos/mc_logo.png" alt="McEdgar's Burgers logo" class="brand-logo">
+        </a>
+        <nav class="side-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-label">Today's special</span>
+          <span class="note-copy">Classic combo, fries, and a shake for $19.99.</span>
+        </div>
+      </aside>
+
+      <main class="page">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Made fresh in Santa Maria</p>
+            <h1>McEdgar's Burgers</h1>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box" for="menu-search">
+              <img src="logos/search-glass.png" alt="" class="search-icon">
+              <input id="menu-search" type="search" placeholder="Search menu">
+            </label>
+            <button class="tray-button" type="button">
+              Tray <span id="tray-count">0</span>
+            </button>
+          </div>
+        </header>
+
+        <section class="hero-section" aria-label="Featured menu items">
+          <div class="hero-copy">
+            <p class="eyebrow">Hot off the grill</p>
+            <h2>Stacked burgers, loud sides, and shakes that do not play background.</h2>
+            <p>
+              A fast casual burger counter with crispy chicken, loaded fries, bright lemonades,
+              and a rotating board of ridiculous house specials.
+            </p>
+            <div class="hero-actions">
+              <a href="#menu" class="primary-button">Order favorites</a>
+              <a href="contact.html" class="secondary-button">Find a table</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="images/banners/banner (1).jpg" alt="Featured McEdgar's menu item" id="hero-image">
+            <div class="hero-dots" id="hero-dots" aria-label="Featured item position"></div>
+          </div>
+        </section>
+
+        <section class="info-strip" aria-label="Restaurant highlights">
+          <div>
+            <span class="metric">10:30 AM</span>
+            <span class="metric-label">Grill opens</span>
+          </div>
+          <div>
+            <span class="metric">27</span>
+            <span class="metric-label">Menu builds</span>
+          </div>
+          <div>
+            <span class="metric">4.8</span>
+            <span class="metric-label">Local rating</span>
+          </div>
+        </section>
+
+        <section class="menu-section" id="menu">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">The board</p>
+              <h2>Menu</h2>
+            </div>
+            <p>Filter by category, add favorites to your tray, and keep building.</p>
+          </div>
+          <div class="menu-filters" aria-label="Menu categories">
+            <button class="filter-button active" type="button" data-category="all">All Items</button>
+            <button class="filter-button" type="button" data-category="burgers">Burgers</button>
+            <button class="filter-button" type="button" data-category="sides">Sides</button>
+            <button class="filter-button" type="button" data-category="drinks">Drinks</button>
+            <button class="filter-button" type="button" data-category="kids">Kids Meals</button>
+            <button class="filter-button" type="button" data-category="desserts">Desserts</button>
+          </div>
+
+          <div class="menu-layout">
+            <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+            <aside class="tray-panel" aria-label="Current tray">
+              <div class="tray-header">
+                <span>Your tray</span>
+                <button class="text-button" type="button" id="clear-tray">Clear</button>
+              </div>
+              <div id="tray-items" class="tray-items">
+                <p class="empty-state">No items yet.</p>
+              </div>
+              <div class="tray-total">
+                <span>Total</span>
+                <strong id="tray-total">$0.00</strong>
+              </div>
+              <a href="contact.html" class="primary-button full-width">Plan pickup</a>
+            </aside>
+          </div>
+        </section>
+
+        <section class="review-section">
+          <div>
+            <p class="eyebrow">Feedback counter</p>
+            <h2>Leave a quick review</h2>
+            <p>
+              Tell the kitchen what hit, what missed, and which sauce should get promoted
+              to the main board.
+            </p>
+          </div>
+          <form class="review-form" data-feedback-form>
+            <div class="form-row">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Edgar">
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com">
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Location
+                <select name="location">
+                  <option value="">Select location</option>
+                  <option>Santa Maria Counter</option>
+                  <option>Downtown Window</option>
+                  <option>Drive-Thru Lab</option>
+                </select>
+              </label>
+              <label>
+                Visit type
+                <select name="visit-type">
+                  <option>Dine-in</option>
+                  <option>Takeout</option>
+                  <option>Delivery</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Notes
+              <textarea name="notes" rows="4" placeholder="The fries were..."></textarea>
+            </label>
+            <button type="submit" class="primary-button">Send feedback</button>
+            <p class="form-message" data-form-message></p>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

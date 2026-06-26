@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chino Valley Chamber of Commerce Foundation | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/logo.png">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Chino Valley Chamber Foundation home">
+      <img src="images/Chino-Valley-Chamber-Green-logo-1.png" alt="Chino Valley Chamber of Commerce Foundation logo">
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="projects.html" class="nav-link">What's New</a>
+      <a href="contact.html" class="nav-link active">Contact Us</a>
+    </nav>
+    <a href="#donate" class="header-cta">Donate</a>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">Contact us</p>
+      <h1>Questions, ideas, volunteering, and donations.</h1>
+      <p>Reach out to get involved or learn more about the Foundation's current work.</p>
+    </section>
+
+    <section class="contact-grid">
+      <article class="contact-card">
+        <span class="card-number">Address</span>
+        <h2>13150 7th Street</h2>
+        <p>Chino, CA 91710</p>
+      </article>
+      <article class="contact-card">
+        <span class="card-number">Phone</span>
+        <h2>(909) 627-6177</h2>
+        <p>Office hours: 9 AM to 5 PM, Monday through Friday.</p>
+      </article>
+      <article class="contact-card">
+        <span class="card-number">Email</span>
+        <h2>zwelborn@chinovalleychamber.com</h2>
+        <p>Send questions, partnership ideas, or volunteer interest.</p>
+      </article>
+    </section>
+
+    <section class="form-panel" id="volunteer">
+      <form data-contact-form>
+        <p class="eyebrow">Send a message</p>
+        <h2>Tell us how you want to help.</h2>
+        <div class="form-row">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            Interest
+            <select name="interest">
+              <option>Volunteering</option>
+              <option>Donation</option>
+              <option>Partnership</option>
+              <option>General question</option>
+            </select>
+          </label>
+          <label>
+            Best time to contact
+            <select name="time">
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </label>
+        </div>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Share a few details..." required></textarea>
+        </label>
+        <button type="submit" class="primary-button">Submit interest</button>
+        <p class="form-message" data-form-message></p>
+      </form>
+
+      <aside class="donate-card" id="donate">
+        <p class="eyebrow">Donate</p>
+        <h2>Support community good projects.</h2>
+        <p>
+          Donations help fund programs that support business growth, volunteer projects,
+          education, and community development.
+        </p>
+        <button class="primary-button" type="button" data-donate-button>Start donation</button>
+        <p class="form-message" data-donate-message></p>
+      </aside>
+    </section>
+
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2>FAQ</h2>
+      <button class="faq-item" type="button">
+        <span>How can I get involved?</span>
+        <span>Anyone can volunteer, donate, or partner with the Foundation on community projects.</span>
+      </button>
+      <button class="faq-item" type="button">
+        <span>What happens to donated funds?</span>
+        <span>Funds support programs and projects that directly benefit the Chino Valley community.</span>
+      </button>
+      <button class="faq-item" type="button">
+        <span>Are you a nonprofit?</span>
+        <span>Yes. The Foundation exists to support community good and economic development work.</span>
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Chino Valley Chamber of Commerce Foundation</strong>
+      <p>13150 7th Street, Chino, CA 91710</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <div class="social-logos-sec">
+      <img src="images/facebook.png" alt="Facebook" class="social-logo">
+      <img src="images/twitter.png" alt="Twitter" class="social-logo">
+      <img src="images/tiktok.png" alt="TikTok" class="social-logo">
+      <img src="images/instagram.png" alt="Instagram" class="social-logo">
+    </div>
+  </footer>
+</body>
+</html>

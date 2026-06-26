@@ -23,6 +23,7 @@
   justify-content: center;
   min-height: 200px;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
 }
 
 .img-placeholder {
@@ -42,7 +43,8 @@
 .project-featured-img img {
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: top center;
   width: 100%;
 }
 
@@ -57,6 +59,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.project-links .ghost {
+  color: var(--wine);
 }
 
 /* small button variant */
@@ -198,6 +204,12 @@
   border-color: var(--line);
 }
 
+.contact-card .icon img {
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+
 /* resume block */
 .resume-block {
   background: var(--wine);
@@ -221,4 +233,57 @@
   display: inline-flex;
   gap: 6px;
   margin-top: 12px;
+}
+
+/* ===== Final projects/contact polish ===== */
+.filter-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-button,
+.copy-button {
+  background: #fff;
+  border: 0.5px solid var(--soft);
+  border-radius: var(--radius);
+  color: var(--wine);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+.filter-button.active,
+.filter-button:hover,
+.copy-button:hover {
+  background: var(--wine);
+  color: var(--light);
+}
+
+.project-card[hidden] {
+  display: none;
+}
+
+.project-card-links a {
+  border-bottom: 0.5px solid var(--line);
+  color: var(--line);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.project-card-links a:hover {
+  color: var(--pink);
+}
+
+.form-message {
+  color: var(--wine);
+  font-size: 13px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
